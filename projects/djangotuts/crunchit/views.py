@@ -5,6 +5,10 @@ from django.urls import reverse
 from .forms import UserForm, LoginForm
 # Create your views here.
 
+def article_home_view(request):
+    return render(request, "index.html", {})
+
+
 def index_view(request):
     try:
        product_data = Product.objects.order_by("-amount_sold")[:5]

@@ -47,7 +47,9 @@ INSTALLED_APPS = [
     'crunchit',
     'api',
 
+
 ]
+
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',  # Added cors
@@ -62,10 +64,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'djangotuts.urls'
 
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, "templates")],
+        'DIRS': [os.path.join(BASE_DIR, "templates"),
+                os.path.join(BASE_DIR, "djangotuts", "django-frontend/build"),
+                 ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -130,7 +136,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "crunchit/static")
+
+    os.path.join(BASE_DIR, "djangotuts", "django-frontend/build/static"),
 ]
 
 MEDIA_URL = '/uploads/'
@@ -138,10 +145,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'crunchit/uploads')
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
+    'http://localhost:8000',
 ]
-# CORS_ALLOW_METHODS = [
-#     'DELETE',
-#     'GET',
-#     'POST',
-#     'PUT',
-# ]
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'POST',
+    'PUT',
+]
