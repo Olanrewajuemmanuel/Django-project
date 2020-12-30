@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Crunchit! and buy it</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.j s"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <link href="{% static 'css/home.css' %}" rel="stylesheet"  />
+  </head>
+  <body>
+<nav class="nav-bar">
+  <div class="container-fluid">
+
+  <div class="nav-bar-items">
+      <a href="/crunchit"><img src="{% static 'assets/logo.png' %}" alt="logo" width="50" height="50" /></a>
+
+    <ul>
+      <li><a href="{% url 'crunchit:shop' %}">Shop</a></li>
+      <li><a href="#">Products</a></li>
+    </ul>
+    <form action="{% url 'crunchit:search' %}" class="navbar-fm">
+      <input type="text" name="search" />
+      <button>Search</button>
+    </form>
+    <div class="navbar-end">
+    <p class="cart"><a href="#">Cart</a></p>
+    <button><a href="/twitter"><i class="fab fa-twitter"></i></a></twitter>
+      <button><a href="/facebook">Facebook</a></twitter>
+      <a href="{% url 'crunchit:register' %}">Register</a>
+     </div>
+  </div>
+
+
+  </div>
+</nav>
+    {% block content %}
+
+
+
+    {% endblock %}
+  </body>
+</html>

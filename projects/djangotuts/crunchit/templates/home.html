@@ -1,0 +1,51 @@
+{% extends "base.html" %} {% block content %}
+{% load static %}
+
+<h4>Top Selling</h4>
+
+<div class="top-sales">
+  {% if product_data %} {% for product in product_data %}
+
+  <div class="card card{{product.id}}">
+    <img src="" alt="image{{product.id}}" class="sale-images" />
+    <h3>{{product.item_name}}</h3>
+    <i>{{product.company}}</i>
+    <div class="btn-btns">
+      <button>Buy</button>
+      <button>Cart</button>
+    </div>
+    
+  </div>
+  {% endfor %} {% else %}
+  
+  <p>Loading...</p>
+  {% endif %}
+  <button>Next</button>
+</div>
+<div class="banner-ads">
+<div class="inner1">
+  <h3>Black Friday Sales</h3>
+  <p>Shop your favourite items with over 50% off</p>
+  </div>
+  <button><a href="{% url 'crunchit:shop' %}">Shop now</a></button>
+</div>
+<h4>Featured Products</h4>
+<div class="featured">
+  {% for product in featured %}
+  <div class="card card{{product.id}}">
+    <img src="{{ product.image }}" alt="image{{product.id}}" class="sale-images" />
+    <p>{{ product.image }}</p>
+    <h3>{{product.item_name}}</h3>
+    {% if product.featured is True %} <p>-50 off<p> {% endif %}
+    <i>{{product.company}}</i>
+    <div class="btn-btns">
+      <button>Buy</button>
+      <button>Cart</button>
+    </div>
+    <button>Next</button>
+  </div>
+  {% endfor %}
+  <button>Next</button>
+</div>
+
+{% endblock %}

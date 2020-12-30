@@ -1,0 +1,93 @@
+.nav-bar {
+    border-radius: none;
+}
+
+.nav-bar-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5px;
+}
+.nav-bar-items img {
+    object-position: top;
+    object-fit: contain;
+}
+.nav-bar-items ul li {
+   float: right;
+   list-style: none;
+   margin-right: 50px;
+   font-weight: bold;
+   flex: 1;
+}
+.nav-bar-items ul li a{
+    text-decoration: none;
+    color: black;
+}
+.navbar-brand {
+    font-family: cursive;
+}
+.navbar-brand a {
+    color: rgb(245, 104, 10);
+    text-decoration: none;
+}
+.navbar-fm {
+    width: 50%;
+}
+.navbar-fm > input{
+    width: 50%;
+    height: 30px;
+    outline: none;
+    
+}
+.navbar-fm > button {
+    height: 32px;
+    width: 20%;
+    margin-left: none;
+    border: none;
+    background:  black;
+    color: white;
+}
+.navbar-end {
+    display: flex;
+    justify-content: space-around;
+}
+.navbar-end > * {
+    margin-right: 5px;
+}
+.top-sales {
+    width: 100%;
+    display: flex;
+    padding: 10px 15px;
+    margin-right: 20px;
+}
+.card {
+    width: 200px;
+    height: 200px;
+    box-shadow: 2px 3px 5px 0 #f1f1f1;
+    margin-right: 50px;
+    padding: 10px 10px;
+}
+.featured {
+    width: 100%;
+    display: flex;
+}
+.banner-ads, .banner-ads > h2 {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.banner-ads button {
+    width: 100px;
+    background-color: #333;
+    border: none;
+    outline: none;
+    height: 30px;
+}
+h4 {
+    color: rgb(70,77,193);
+    letter-spacing: 5px;
+}

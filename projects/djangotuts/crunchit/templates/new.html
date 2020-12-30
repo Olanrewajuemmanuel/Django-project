@@ -1,0 +1,9 @@
+<h1>Hello</h1>
+<h3>Register with us</h3>
+{{ error }}
+<form method="POST" id="register">
+{% csrf_token %}
+{{ form.as_p }}
+<button>Save</button>
+<a href="{% url 'crunchit:login' %}">Login</a>
+</form>
